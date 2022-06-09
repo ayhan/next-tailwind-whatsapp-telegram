@@ -9,7 +9,7 @@ export default function Chat() {
         <main className="flex items-center justify-center h-screen">
           <div className="w-4/5 max-w-5xl rounded-md h-4/5 bg-wp-secondary-200">
             <header className="flex justify-between p-2 text-xs text-wp-white-200 rounded-t-md bg-wp-primary">
-              <div className="font-bold">Whatsapp</div>
+              <div className="font-bold cursor-default">Whatsapp</div>
               <div className="flex justify-around cursor-pointer w-28">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
