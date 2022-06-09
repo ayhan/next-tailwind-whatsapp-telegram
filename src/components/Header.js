@@ -3,12 +3,6 @@ import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 
-const userNavigation = [
-  { name: "Dashboard", href: "#" },
-  { name: "Team", href: "#" },
-  { name: "Projects", href: "#" },
-];
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
