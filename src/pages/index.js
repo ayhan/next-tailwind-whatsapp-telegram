@@ -1,5 +1,5 @@
-import DashBoard from 'pages/dashboard'
+import Home from 'pages/home'
 
 export default function Example() {
-  return <DashBoard/>
+  return <Home/>
 }

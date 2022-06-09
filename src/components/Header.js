@@ -1,13 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
-
-const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-];
+import { Menu, Transition } from "@headlessui/react";
+import Link from "next/link";
 
 const userNavigation = [
   { name: "Dashboard", href: "#" },
@@ -19,7 +13,14 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Header = () => {
+const Header = (props) => {
+  const { currentPage } = props;
+
+  const navigation = [
+    { name: "Home", href: "/home" },
+    { name: "Chat", href: "/chat" },
+  ];
+
   return (
     <nav className="bg-gray-800 ">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -35,34 +36,45 @@ const Header = () => {
             <div className="hidden md:block">
               <div className="flex items-baseline ml-10 space-x-4">
                 {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className={classNames(
-                      item.current
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                      "px-3 py-2 rounded-md text-sm font-medium"
-                    )}
-                    aria-current={item.current ? "page" : undefined}
-                  >
-                    <div className="flex items-center justify-items-center">
-                      <BellIcon className="w-3 h-3 mr-2" aria-hidden="true" />
-                      {item.name}
-                    </div>
-                  </a>
+                  <Link href={item.href}>
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className={classNames(
+                        item.name == currentPage
+                          ? "bg-gray-900 text-white"
+                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        "px-3 py-2 rounded-md text-sm font-medium"
+                      )}
+                      aria-current={item.current ? "page" : undefined}
+                    >
+                      <div className="flex items-center justify-items-center">
+                        {item.name}
+                      </div>
+                    </a>
+                  </Link>
                 ))}
               </div>
             </div>
           </div>
           <div className="md:hidden">
             <div className="flex items-center ml-4 md:ml-6">
-
               {/* Profile dropdown */}
               <Menu as="div" className="relative ml-3">
                 <div>
                   <Menu.Button className="flex items-center max-w-xs p-2 text-sm bg-white rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                    <MenuIcon className="block w-6 h-6" aria-hidden="true" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>{" "}
                   </Menu.Button>
                 </div>
                 <Transition
@@ -75,9 +87,10 @@ const Header = () => {
                   leaveTo="transform opacity-0 scale-95"
                 >
                   <Menu.Items className="absolute right-0 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                    {userNavigation.map((item) => (
+                    {navigation.map((item) => (
                       <Menu.Item key={item.name}>
                         {({ active }) => (
+                          <Link href={item.href}>
                           <a
                             href={item.href}
                             className={classNames(
@@ -87,6 +100,7 @@ const Header = () => {
                           >
                             {item.name}
                           </a>
+                          </Link>
                         )}
                       </Menu.Item>
                     ))}
