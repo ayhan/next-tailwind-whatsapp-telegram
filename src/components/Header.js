@@ -30,9 +30,8 @@ const Header = (props) => {
             <div className="hidden md:block">
               <div className="flex items-baseline ml-10 space-x-4">
                 {navigation.map((item) => (
-                  <Link href={item.href}>
+                  <Link  key={item.name} href={item.href}>
                     <a
-                      key={item.name}
                       href={item.href}
                       className={classNames(
                         item.name == currentPage
@@ -59,14 +58,14 @@ const Header = (props) => {
                   <Menu.Button className="flex items-center max-w-xs p-2 text-sm bg-white rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5"
+                      className="w-5 h-5"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       />
                     </svg>{" "}
                   </Menu.Button>
