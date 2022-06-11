@@ -54,8 +54,8 @@ export default function Chat() {
                 </svg>
               </div>
             </header>
-            <div className="flex w-full text-white divide-x divide-wp-white-200">
-              <div className="w-1/3">
+            <div className="grid grid-cols-3 text-white divide-x divide-wp-white-200">
+              <div className="col-span-1">
                 <div className="flex items-center justify-between bg-wp-secondary-100">
                   <div>
                     <img
@@ -110,7 +110,9 @@ export default function Chat() {
                   </div>
                 </div>
               </div>
-              <div className="w-2/3">2</div>
+              <div className="col-span-2">
+                
+              </div>
             </div>
           </div>
         </main>
