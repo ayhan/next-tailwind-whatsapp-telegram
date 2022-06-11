@@ -4,21 +4,21 @@ import ChatCard from "./components/ChatCard";
 
 const chatCard = [
   {
-    image: "https://via.placeholder.com/50",
+    img: "https://via.placeholder.com/50",
     name: "Jhon Doe",
-    lastMessage: "Lorem Ipsum dolor sit Amet",
+    message: "Lorem Ipsum dolor sit Amet",
     date: "14.05.2022",
   },
   {
-    image: "https://via.placeholder.com/50",
+    img: "https://via.placeholder.com/50",
     name: "Jhon Doe",
-    lastMessage: "Lorem Ipsum dolor sit Amet",
+    message: "Lorem Ipsum dolor sit Amet",
     date: "14.05.2022",
   },
   {
-    image: "https://via.placeholder.com/50",
+    img: "https://via.placeholder.com/50",
     name: "Jhon Doea",
-    lastMessage: "Lorem Ipsum dolor sit Amet",
+    message: "Lorem Ipsum dolor sit Amet",
     date: "14.05.2022",
   },
 ];
