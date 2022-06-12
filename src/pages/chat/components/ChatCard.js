@@ -13,7 +13,11 @@ export const ChatCard = (props) => {
         </div>
         <div className="flex justify-between text-right border-wp-secondary-100">
           <p className="text-xs text-wp-white-200">{data.message}</p>
-          <div className="p-0.5 rounded-full bg-wp-primary">8</div>
+          <div className="w-5 h-5 text-sm text-center rounded-full bg-wp-primary">
+            <p>
+              8
+            </p>
+          </div>
         </div>
       </div>
     </div>

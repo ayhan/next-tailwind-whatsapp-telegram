@@ -1,27 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import Header from "components/Header";
 import ChatCard from "./components/ChatCard";
-
-const chatCard = [
-  {
-    img: "https://via.placeholder.com/50",
-    name: "Jhon Doe",
-    message: "Lorem Ipsum dolor sit Amet",
-    date: "14.05.2022",
-  },
-  {
-    img: "https://via.placeholder.com/50",
-    name: "Jhon Doe",
-    message: "Lorem Ipsum dolor sit Amet",
-    date: "14.05.2022",
-  },
-  {
-    img: "https://via.placeholder.com/50",
-    name: "Jhon Doea",
-    message: "Lorem Ipsum dolor sit Amet",
-    date: "14.05.2022",
-  },
-];
+import {chatCard} from "./data"
 
 export default function Chat() {
   return (
@@ -154,12 +134,15 @@ export default function Chat() {
                     />
                   </div>
                 </div>
+                <div className="">
                 {chatCard.map((item, index) => (
                     <div key={index}>
                       <ChatCard data={item} />
                     </div>
                   )
                 )}
+
+                </div>
               </div>
               <div className="col-span-2"></div>
             </div>
