@@ -9,7 +9,7 @@ export default function Chat() {
       <div className="h-screen">
         <Header currentPage="Whatsapp" />
         <main className="flex items-center justify-center h-screen">
-          <div className="w-4/5 max-w-5xl rounded-md h-4/5 bg-wp-secondary-200">
+          <div className="w-4/5 max-w-5xl rounded-md h-3/5 max-h-3/5 bg-wp-secondary-200">
             <header className="flex justify-between p-2 text-xs text-wp-white-200 rounded-t-md bg-wp-primary">
               <div className="font-bold cursor-default">Whatsapp</div>
               <div className="flex justify-around cursor-pointer w-28">
@@ -56,8 +56,9 @@ export default function Chat() {
                 </svg>
               </div>
             </header>
-            <div className="grid grid-cols-3 text-white divide-wp-white-200">
-              <div className="col-span-1 border-r border-wp-secondary-100">
+            <div className="grid h-full grid-cols-3">
+              <div className="col-span-1 overflow-hidden">
+                <div className="border-r border-wp-secondary-100">
                 <div className="flex items-center justify-between bg-wp-secondary-100">
                   <div>
                     <img
@@ -134,7 +135,8 @@ export default function Chat() {
                     />
                   </div>
                 </div>
-                <div className="">
+                </div>
+                <div className="overflow-y-scroll chat-list border-wp-secondary-100 h-4/5">
                 {chatCard.map((item, index) => (
                     <div key={index}>
                       <ChatCard data={item} />
@@ -144,7 +146,9 @@ export default function Chat() {
 
                 </div>
               </div>
-              <div className="col-span-2"></div>
+              <div className="flex items-end justify-end col-span-2 text-red-800">
+                
+              </div>
             </div>
           </div>
         </main>
