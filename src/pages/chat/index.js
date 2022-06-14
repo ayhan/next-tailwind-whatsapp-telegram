@@ -190,6 +190,13 @@ export default function Chat() {
                     </svg>
                   </div>
                 </div>
+                <div className="relative w-full h-full">
+                  <div
+                    className="absolute top-0 w-full h-full bg-center bg-auto opacity-10"
+                    style={{ "background-image": "url(/img/chat-bg.png)" }}
+                  ></div>
+                  
+                </div>
               </div>
             </div>
           </div>
