@@ -27,7 +27,7 @@ export default function Chat() {
       <div className="h-screen">
         <Header currentPage="Whatsapp" />
         <main className="flex items-center justify-center h-screen">
-          <div className="w-4/5 max-w-5xl rounded-md h-3/5 max-h-3/5 bg-wp-secondary-200">
+          <div className="w-4/5 max-w-5xl rounded-md bg-wp-secondary-200">
             <header className="flex justify-between p-2 text-xs text-wp-white-200 rounded-t-md bg-wp-primary">
               <div className="font-bold cursor-default">Whatsapp</div>
               <div className="flex justify-around cursor-pointer w-28">
@@ -42,7 +42,7 @@ export default function Chat() {
                 <SvgGenerator path="M6 18L18 6M6 6l12 12" className="w-4 h-4" />
               </div>
             </header>
-            <div className="grid h-full grid-cols-3">
+            <div className="grid grid-cols-3 chat-screen">
               <div className="col-span-1 overflow-hidden">
                 <div className="border-r border-wp-secondary-100">
                   <div className="flex items-center justify-between bg-wp-secondary-100">
@@ -133,10 +133,23 @@ export default function Chat() {
 
                   <div className="text-white"></div>
                 </div>
-                <div className="bg-wp-secondary-100">
+                <div className="flex p-2 bg-wp-secondary-100">
                   <SvgGenerator
                     path="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    className="w-5 h-5 top-2 left-2 text-wp-white-200"
+                    className="mr-3 w-7 top-2 left-2 text-wp-white-200"
+                  />
+                  <SvgGenerator
+                    path="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"
+                    className="mr-3 w-7 top-2 left-2 text-wp-white-200"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Bir mesaj yazın"
+                    className="w-full text-wp-white-100 text-xs p-2.5 rounded-md outline-none bg-wp-secondary-400"
+                  />
+                  <SvgGenerator
+                    path="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+                    className="mx-3 w-7 top-2 left-2 text-wp-white-200"
                   />
                 </div>
               </div>

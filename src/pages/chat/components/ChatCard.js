@@ -2,7 +2,7 @@ export const ChatCard = (props) => {
   const { data } = props;
   console.log(data);
   return (
-    <div className="grid grid-cols-5 p-2">
+    <div className="grid grid-cols-5 p-2 cursor-pointer hover:bg-wp-secondary-300">
       <div className="col-span-1">
         <img src={data.img} alt={data.name} className="rounded-full w-15" />
       </div>

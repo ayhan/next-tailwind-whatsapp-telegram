@@ -25,3 +25,7 @@ a {
 .chat-list::-webkit-scrollbar-thumb {
   background: #374045; 
 }
+
+.chat-screen {
+  height: 500px;
+}
