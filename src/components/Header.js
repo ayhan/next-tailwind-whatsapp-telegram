@@ -18,10 +18,10 @@ const Header = () => {
   return (
     <nav className="bg-gray-800 ">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-end md:justify-center h-16">
           <div className="flex items-center">
             <div className="hidden md:block">
-              <div className="flex items-baseline ml-10 space-x-4">
+              <div className="flex items-baseline ml-10 space-x-4 font-eduSa">
                 {navigation.map((item) => (
                   <Link  key={item.name} href={item.href}>
                     <a
@@ -30,9 +30,8 @@ const Header = () => {
                         item.href == router.route
                           ? "bg-gray-900 text-white"
                           : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                        "px-3 py-2 rounded-md text-sm font-medium"
+                        "px-3 py-2 rounded-md text-sm font-bold"
                       )}
-                      aria-current={item.current ? "page" : undefined}
                     >
                       <div className="flex items-center justify-items-center">
                         {item.name}
@@ -45,7 +44,6 @@ const Header = () => {
           </div>
           <div className="md:hidden">
             <div className="flex items-center ml-4 md:ml-6">
-              {/* Profile dropdown */}
               <Menu as="div" className="relative ml-3">
                 <div>
                   <Menu.Button className="flex items-center max-w-xs p-2 text-sm bg-white rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">

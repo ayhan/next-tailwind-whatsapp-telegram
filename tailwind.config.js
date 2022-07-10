@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        eduSa: ['Edu SA Beginner', 'cursive']
+      },
       colors: {
         wp: {
           primary: "#00a884",

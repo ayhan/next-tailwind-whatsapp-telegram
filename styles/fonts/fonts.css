@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Edu SA Beginner';
+    src: url('EduSABeginner-Medium.ttf');
+    src: url('EduSABeginner-Bold.ttf') format('truetype'),
+         url('EduSABeginner-Medium.ttf') format('truetype'),
+         url('EduSABeginner-Regular.ttf') format('truetype'),
+         url('EduSABeginner-SemiBold.ttf') format('truetype'),
+  }
