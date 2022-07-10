@@ -5,6 +5,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        wiggleScale: {
+          '0%, 100%': {
+            transform: 'rotate(0deg)',
+            transform: 'scale(1.08)',
+          },
+          '50%': { transform: 'rotate(6deg)' },
+        }
+      },
       fontFamily: {
         eduSa: ['Edu SA Beginner', 'cursive']
       },
@@ -22,6 +31,9 @@ module.exports = {
             400: "#2a3942"
           },
         },
+        telegram: {
+          primary: '#0088cc'
+        }
       },
       opacity: {
         0: "0",
