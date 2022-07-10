@@ -22,7 +22,7 @@ const Header = () => {
           <div className="flex items-center">
             <div className="hidden md:block">
               <div className="flex items-baseline ml-10 space-x-4 font-eduSa">
-                {navigation.map((item) => (
+                {navigation.map((item) => ( 
                   <Link  key={item.name} href={item.href}>
                     <a
                       href={item.href}
