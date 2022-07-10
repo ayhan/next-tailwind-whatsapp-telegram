@@ -1,5 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
-import Header from "components/Header";
 import ChatCard from "./components/ChatCard";
 import { chatCard } from "./data";
 
@@ -25,7 +23,6 @@ export default function Chat() {
   return (
     <>
       <div className="h-screen">
-        <Header currentPage="Whatsapp" />
         <main className="flex items-center justify-center h-screen">
           <div className="w-4/5 max-w-5xl rounded-md bg-wp-secondary-200">
             <header className="flex justify-between p-2 text-xs text-wp-white-200 rounded-t-md bg-wp-primary">
