@@ -13,6 +13,7 @@ const Header = () => {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Whatsapp", href: "/whatsapp" },
+    { name: "Telegram", href: "/telegram" },
   ];
 
   return (

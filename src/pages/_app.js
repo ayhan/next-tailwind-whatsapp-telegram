@@ -9,8 +9,6 @@ function MyApp({ Component, pageProps }) {
         <title>Tailwind Some Works</title>
         <meta name="description" content="Tailwind Some Works" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       </Head>
       <Layout>
         <Component {...pageProps} />

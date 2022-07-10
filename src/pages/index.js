@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <div className="min-h-full">
         <main>
-          <div className='flex items-center justify-center h-screen'>
+          <div className='flex items-center justify-center h-screen font-eduSa'>
             <Link href="/whatsapp">
               <a>
                 <div className="w-48 group cursor-pointer hover:animate-[wiggleScale_1s_ease-in-out_infinite] mr-10 bg-gray-800 rounded-tl-lg rounded-br-xl flex flex-col items-center p-4">
