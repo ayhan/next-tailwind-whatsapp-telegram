@@ -20,10 +20,10 @@ a {
   box-sizing: border-box;
 }
 
-.chat-list::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
 }
-.chat-list::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: #374045; 
 }
 

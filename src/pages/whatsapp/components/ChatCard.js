@@ -1,4 +1,4 @@
-export const ChatCard = (props) => {
+const ChatCard = (props) => {
   const { data } = props;
   return (
     <div className="grid grid-cols-5 p-2 cursor-pointer hover:bg-wp-secondary-300">

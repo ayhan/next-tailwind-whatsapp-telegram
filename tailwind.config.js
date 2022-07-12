@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        'xxs': '.6rem',
+      },
       keyframes: {
         wiggleScale: {
           '0%, 100%': {
