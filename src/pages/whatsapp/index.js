@@ -25,7 +25,7 @@ export default function Chat() {
     <>
       <div className="h-screen">
         <main className="flex items-center justify-center h-screen">
-          <div className="rounded-md bg-wp-secondary-200 shadow-lg shadow-black/80">
+          <div className="w-4/5 max-w-5xl rounded-md bg-wp-secondary-200 shadow-lg shadow-black/80">
             <header className="flex justify-between p-2 text-xs text-wp-white-100 rounded-t-md bg-wp-primary">
               <div className="font-bold cursor-default">Whatsapp</div>
               <div className="flex justify-around cursor-pointer w-28">
@@ -34,7 +34,7 @@ export default function Chat() {
                   className="w-4 h-4"
                 />
                 <SvgGenerator
-                  path="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                  path="M4 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h 2 0 00-2 2z"
                   className="w-4 h-4"
                 />
                 <SvgGenerator path="M6 18L18 6M6 6l12 12" className="w-4 h-4" />
@@ -123,7 +123,7 @@ export default function Chat() {
                     />
                   </div>
                 </div>
-                <div className="relative w-full h-96 overflow-y-scroll flex justify-end flex-col" style={{ "backgroundImage": "url(/img/chat-bg.png)" }}>
+                <div className="relative pb-2 w-full h-96 overflow-y-scroll flex justify-end flex-col" style={{ "backgroundImage": "url(/img/chat-bg.png)" }}>
                   {messages.map((item, index) => (
                     <div key={index}>
                       <Messages data={item} />

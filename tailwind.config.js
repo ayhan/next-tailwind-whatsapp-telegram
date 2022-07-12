@@ -35,7 +35,13 @@ module.exports = {
           },
         },
         telegram: {
-          primary: '#0088cc'
+          primary: '#0088cc',
+          gray: {
+            100: "#808080",
+            200: "#3a4047",
+            300: "#282e33",
+            400: "#18191d"
+          }
         }
       },
       opacity: {
