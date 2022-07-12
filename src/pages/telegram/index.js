@@ -25,7 +25,7 @@ export default function Chat() {
     <>
       <div className="h-screen">
         <main className="flex items-center justify-center h-screen">
-          <div className="w-4/5 max-w-5xl rounded-md bg-telegram-gray-300 shadow-lg shadow-black/80">
+          <div className="w-4/5 max-w-5xl rounded-md bg-telegram-gray-300 shadow-lg shadow-gray-800">
             <header className="flex justify-end p-2 text-xs text-telegram-gray-100 rounded-t-md bg-telegram-gray-200">
               <div className="flex justify-around cursor-pointer w-28">
                 <SvgGenerator
