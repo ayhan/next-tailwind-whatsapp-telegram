@@ -25,8 +25,8 @@ export default function Chat() {
     <>
       <div className="h-screen">
         <main className="flex items-center justify-center h-screen">
-          <div className="w-4/5 max-w-5xl rounded-md bg-wp-secondary-200">
-            <header className="flex justify-between p-2 text-xs text-wp-white-200 rounded-t-md bg-wp-primary">
+          <div className="rounded-md bg-wp-secondary-200 shadow-lg shadow-black/80">
+            <header className="flex justify-between p-2 text-xs text-wp-white-100 rounded-t-md bg-wp-primary">
               <div className="font-bold cursor-default">Whatsapp</div>
               <div className="flex justify-around cursor-pointer w-28">
                 <SvgGenerator
