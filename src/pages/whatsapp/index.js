@@ -1,5 +1,6 @@
 import ChatCard from "./components/ChatCard";
-import { chatCard } from "./data";
+import { chatCard, messages } from "./data";
+import Messages from "./components/Messages";
 
 export default function Chat() {
   const SvgGenerator = (props) => {
@@ -47,7 +48,7 @@ export default function Chat() {
                       <img
                         className="w-10 m-2 rounded-full"
                         alt="profile picture"
-                        src="https://i.pravatar.cc/50?img=28"
+                        src="https://i.pravatar.cc/50?img=11"
                       />
                     </div>
                     <div className="flex justify-around w-28 text-wp-white-200">
@@ -76,7 +77,7 @@ export default function Chat() {
                     </div>
                   </div>
                 </div>
-                <div className="overflow-y-scroll chat-list border-wp-secondary-100 h-4/5">
+                <div className="overflow-y-scroll border-wp-secondary-100 h-4/5">
                   {chatCard.map((item, index) => (
                     <div key={index}>
                       <ChatCard data={item} />
@@ -122,13 +123,12 @@ export default function Chat() {
                     />
                   </div>
                 </div>
-                <div className="relative w-full h-full">
-                  <div
-                    className="absolute top-0 w-full h-full bg-center bg-auto opacity-10"
-                    style={{ "backgroundImage": "url(/img/chat-bg.png)" }}
-                  ></div>
-
-                  <div className="text-white"></div>
+                <div className="relative w-full h-96 overflow-y-scroll flex justify-end flex-col" style={{ "backgroundImage": "url(/img/chat-bg.png)" }}>
+                  {messages.map((item, index) => (
+                    <div key={index}>
+                      <Messages data={item} />
+                    </div>
+                  ))}
                 </div>
                 <div className="flex p-2 bg-wp-secondary-100">
                   <SvgGenerator

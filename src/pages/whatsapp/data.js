@@ -73,3 +73,24 @@ export const chatCard = [
     date: "14.05.2022",
   },
 ];
+
+export const messages = [
+  {
+    id: 0,
+    message: "Hey 😍",
+    time: "05:03",
+    me: true
+  },
+  {
+    id: 1,
+    message: "Stop there please ! I have a boyfriend",
+    time: "05:05",
+    me: false
+  },
+  {
+    id: 2,
+    message: "I'am your dad 😠 who is that brave boy",
+    time: "06:07",
+    me: true
+  }
+]
