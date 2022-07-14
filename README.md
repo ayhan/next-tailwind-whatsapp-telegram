@@ -1,4 +1,4 @@
-# Whatsapp and Telegram Clone with Tailwind
+# Whatsapp and Telegram Clone with Tailwind, Only UI
 
 ![](demo.gif)
 
